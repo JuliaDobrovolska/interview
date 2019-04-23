@@ -1,0 +1,37 @@
+.main {
+    // background-image: url(../img/girl640.webp);
+    // background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    // height: 90vh;
+    // position: absolute;
+    // padding: 0 5vw;
+
+    &__picture {
+        position: absolute;
+        top:0;
+        left:0;
+        
+
+        width: 100%;
+
+        // max-height: 100vh;
+        // width: auto;
+        // object-fit: contain;
+        // height: auto;
+        object-fit: cover;
+    }
+
+    // }
+    // &__title {
+    //     width: 60%;
+    //     line-height: 1;
+    // }
+    // &__description {
+    //     width: 60%;
+    // }
+
+}

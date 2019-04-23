@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/interview_mob.bundle.css">
+</head>
+<body>
+    <header class="header">
+            <nav class="header__nav">
+                <img class="logo" src="./img/pb.svg" alt="logo">
+                <ul class="lang">
+                    <li class="lang__item">укр</li>
+                    <li class="lang__item lang__item--selected">рус</li>
+                </ul>
+            </nav>
+    </header>
+    <main class="main">
+        <section class="main__settings">
+            <span class="main__step">Шаг 1 из 3</span>
+            <h2 class="main__header">Настройки подключения</h2>
+            <p class="main__description">Для проведения видеозаписи нам необходимо получить доступ:</p>
+            <ul class="main__settings__access">
+                <li class="access__item">
+                    <img class="access__item__img" src="./img/camera.svg" alt="camera">
+                    <span class="access__item__text">доступ к камере</span>
+                </li>
+                <li class="access__item">
+                    <img class="access__item__img" src="./img/micro.svg" alt="micro">
+                    <span class="access__item__text">доступ к микрофону</span>
+                </li>
+            </ul>
+            <p class="main__description">Для корректной работы системы, пожалуйста, нажмите “Разрешить” в открывшемся диалоговом окне. В случае, если у вас более одной камеры или микрофона, выберите те, которые необходимы в выпадающем списке.</p>
+            <button class="main__button" id="settingsButton" disabled >Продолжить</button>
+        </section>
+        <section class="main__rules">
+            <span class="main__step">Шаг 2 из 3</span>
+            <h2 class="main__header">Для успешной записи интервью:</h2>
+            <ul class="main__description">
+                <li>
+                    <p>Вам необходимо будет ответить на несколько вопросов, касающихся Вашего опыта работы. <span class="main__description--bold">Интервью займет у Вас не более 15 минут.</span></p>
+                </li>
+                <li>
+                    <p>Сначала Вы будете видеть вопрос. На этом этапе никакой видеозаписи не ведется. У Вас есть возможность подготовиться к ответу. Когда Вы будете готовы отвечать, нажимайте кнопку «Записать видео»</p>
+                </li>
+                <li>
+                    <p>Включится запись Вашего ответа. Обратите внимание на таймер. Ответ на каждый вопрос ограничен по времени! Поэтому отвечайте четко на поставленный вопрос. Вопрос все время будет перед Вами, вверху страницы. Вы можете остановить запись или закончить запись досрочно. Некоторые вопросы могут содержать несколько небольших уточняющих вопросов-подсказок. Пожалуйста, следуйте им и отвечайте на все вопросы для полного развернутого ответа. Записав ответ на вопрос, у Вас будет возможность:</p>
+                </li>
+            </ul>
+            <ul class="rules__list">
+                <li class="rules__list__item">просмотреть свой ответ</li>
+                <li class="rules__list__item">1 раз его перезаписать</li>
+            </ul>
+            <!--  -->
+            <figure class="main__media">
+                <video class="main__media__content" autoplay muted></video>
+                
+
+            </figure>
+            <figure class="main__media">
+                    <video class="main__media__content" autoplay muted></video>
+                    
+    
+                </figure>
+            <button class="main__button" id="rulesButton">Продолжить</button>
+        </section>
+        <section class="main__start">
+                <span class="main__step">Шаг 3 из 3</span>
+                <h2 class="main__header">Давайте начинать!</h2>
+                <p class="main__description">
+                        Для записи ответа на вопрос нажмите на «Запись видео» и отвечайте на вопрос. Учтите ограниченость времени на вопрос и используйте
+                        его рационально.
+                </p>
+                
+                <figure class="main__media">
+                    <video class="main__media__content"  autoplay muted></video>
+                </figure>
+                <button class="main__button">Начать интервью</button>
+        </section>
+        <section class="main__questions">
+            <h2 class="main__header">Вопросы 1 из 5</h2>
+            <p class="main__subtitle">Давайте познакомимся! Расскажите о себе</p>
+            <ol class="question__list">
+                <li class="question__list__item">На какой специальности Вы учились?</li>
+                <li class="question__list__item">Почему выбрали такую специальность?</li>
+                <li class="question__list__item">Какой опыт работы имеете?</li>
+                <li class="question__list__item">С чем был связана смена мест работы/должностей?</li>
+                <li class="question__list__item">Какие вакансии сейчас рассматриваете?</li>
+            </ol>
+            <div class="remember">
+                <span class="remember__title">Помните!</span>
+                <p class="remember__description">Вам необходимо ответить на все вопросы. От полноты и качества ответов зависит результат интервью.</p>
+            </div>
+            <figure class="main__media">
+                    <video class="main__media__content"  autoplay muted></video>
+            </figure>
+            <button class="main__button">Записать видео</button>
+        </section>
+            
+
+    </main>
+    <script src="./js/interview.bundle.js"></script>
+</body>
+</html>

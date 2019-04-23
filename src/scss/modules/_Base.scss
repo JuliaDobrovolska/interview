@@ -1,0 +1,35 @@
+@font-face {
+    font-family: "Open Sans Regular";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Open Sans Bold";
+    font-style: normal;
+    font-weight: 800;
+    src: url("../fonts/OpenSans-Bold.ttf") format("truetype");
+}
+
+$bg-color: #ffffff;
+$fontRegular: "Open Sans Regular";
+$fontBold: "Open Sans Bold";
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $bg-color;
+    font-family: $fontRegular;
+}
+.main {
+    // margin: 7%;
+}
+li {
+    list-style-type: none;
+   }
+a {
+    text-decoration: none;
+}
+h1 {
+    font-family: $fontBold;
+}
+
