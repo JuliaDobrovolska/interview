@@ -2,7 +2,8 @@ const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const fs = require('fs')
+
+const fs = require('fs');
 
 function generateHtmlPlugins(templateDir) {
   const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
@@ -24,7 +25,7 @@ module.exports = [{
   entry: {
     "main":'./src/js/index.js',
     "interview":'./src/js/interview.js',
-   
+    
 
   },
   output: {
@@ -49,6 +50,7 @@ module.exports = [{
       },
     ]
   },
+  
   plugins: [
     new CopyWebpackPlugin([{
         from: './src/fonts',
@@ -63,9 +65,10 @@ module.exports = [{
 },
 {
   entry: {
-  "mobile": './src/scss/mobile.scss',
-  "desktop":'./src/scss/desktop.scss',
-  "interview_mob": './src/scss/interview_mob.scss'
+  "default_mob": './src/scss/default_mob.scss',
+  "default_desktop":'./src/scss/default_desktop.scss',
+  "interview_mob": './src/scss/interview_mob.scss',
+  "interview_desktop": './src/scss/interview_desktop.scss'
 
 },
 output: {

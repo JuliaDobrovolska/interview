@@ -5,42 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Online interview</title>
-    <link rel="stylesheet" href="./css/mobile.bundle.css">
-    <link rel="stylesheet" href="./css/desktop.bundle.css" media="(min-width: 425.02px)">
+    <link rel="stylesheet" href="./css/default_mob.bundle.css">
+    <link rel="stylesheet" href="./css/default_desktop.bundle.css" media="(min-width: 425.02px)">
 
 </head>
 <body>
-    <!-- <header class="header">
+    <header class="header">
         <nav class="header__nav">
             <img class="logo" src="./img/pb.svg" alt="logo">
-            <ul class="lang">
-                <li class="lang__item">укр</li>
-                <li class="lang__item lang__item--selected">рус</li>
-            </ul>
+            <!-- <ul class="lang">
+                <li class="lang__item lang__item--selected">укр</li>
+                <li class="lang__item">рус</li>
+            </ul> -->
         </nav>
-    </header> -->
+    </header> 
     <main class="main">
         <picture >
             <source media="(min-width: 1921px)" srcset="./img/girl3840.webp" type="image/webp">
             <source media="(min-width: 1921px)" srcset="./img/girl3840.jpg" type="image/jpg">
-            <source media="(min-width: 961px) and (max-width:1920px)" srcset="./img/girl1920.webp" type="image/webp">
-            <source media="(min-width: 961px) and (max-width:1920px)" srcset="./img/girl1920.jpg" type="image/jpg">
-            <source media="(min-width: 641px) and (max-width:960px)" srcset="./img/girl960.webp" type="image/webp">
-            <source media="(min-width: 641px) and (max-width:960px)" srcset="./img/girl960.jpg" type="image/jpg">
-            <source media="(min-width: 320px) and (max-width:640px)" srcset="./img/girl640.webp" type="image/webp">
-            <source media="(min-width: 320px) and (max-width:640px)" srcset="./img/girl640.jpg" type="image/jpg">
+            <source media="(min-width: 641px) and (max-width:1920px)" srcset="./img/girl1920.webp" type="image/webp">
+            <source media="(min-width: 641px) and (max-width:1920px)" srcset="./img/girl1920.jpg" type="image/jpg">
+            <source media="(min-width: 425px) and (max-width:640px)" srcset="./img/girl960.webp" type="image/webp" >
+            <source media="(min-width: 425px) and (max-width:640px)" srcset="./img/girl960.jpg" type="image/jpg">
+            <source media="(min-width: 320px) and (max-width:424px)" srcset="./img/girl640.webp" type="image/webp">
+            <source media="(min-width: 320px) and (max-width:424px)" srcset="./img/girl640.jpg" type="image/jpg">
             <source media="(max-width:320px)" srcset="./img/girl320.webp" type="image/webp">
             <img src="./img/girl320.jpg" alt="interview" class="main__picture">
         </picture>
-        <!-- <h1 class="main__title">Оффлайн интервью</h1>
-        <p class="main__description">Добро пожаловать в систему дистанционной оценки кандидатов на работу в ПриватБанк. Пожалуйста, введите номер телефона, который Вы указали в резюме.</p>
-        <form action="">
-            <input type="tel">
-        </form> -->
+        <section class="main__content">
+            <h1 class="main__title">Оффлайн интервью</h1>
+            <p class="main__description">Добро пожаловать в систему дистанционной оценки кандидатов на работу в ПриватБанк. Пожалуйста, введите номер телефона, который Вы указали в резюме.</p>
+            <form class="main__form" id="getPhoneNumber">
+                <input type="tel" class="main__form__input" id="inputPhone" placeholder="+38 (0__) ___-__-__">
+                <button type="submit" class="main__form__button" id="formButton"><img src="./img/next-copy.svg" alt="arrow"></button>
+            </form>
+            
+            <template id="sendPassword">
+                <form class="main__form" id="getPassword" action="interview.html">
+                    <input type="number" class="main__form__input" required id="inputPassword" placeholder="Введите ОТП-пароль">
+                    <button type="submit" class="main__form__button" id="checkPassword"><img src="./img/next-copy.svg" alt="arrow"></button>
+                </form>
+                <p class="main__content__item" id="firstParagraph"></p>
+                <p class="main__content__item" id="secondParagraph"></p>
+            </template>
+            <template id="callbackTemp">
+                <div class="main__callback">
+                    <img src="./img/phoneicon.svg" width="44px" alt="phone" class="call__img">
+                    <a class="call__button" id="callButton">Позвоните мне</a>
+                </div>
+            </template>
+            <template id="callTemp">
+                <div class="main__call">
+                    <img src="./img/phoneicon.svg" alt="phone" class="call__img">
+                    <p class="call__info"> Вас вызывает +3809100011924</p>
+                </div>
+            </template>
+            
+        </section>
     </main>
 
 
 
-    <script src="./js/bundle.js"></script>
+    <script src="./js/main.bundle.js"></script>
 </body>
 </html>

@@ -14,6 +14,16 @@
 $bg-color: #ffffff;
 $fontRegular: "Open Sans Regular";
 $fontBold: "Open Sans Bold";
+$darkGrey: #424242;
+$lightGrey: #595959;
+$lightSkyBlue: #dde2e6;
+$brown-gray: #8b8b8b;
+$brownish-gray: #727272;
+$attention: #ff4343;
+$light-gray-blue: #abb2b7;
+$lightBlack: #1f1f1f;
+$green: #75af26;
+
 body {
     margin: 0;
     padding: 0;
@@ -31,5 +41,9 @@ a {
 }
 h1 {
     font-family: $fontBold;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
 

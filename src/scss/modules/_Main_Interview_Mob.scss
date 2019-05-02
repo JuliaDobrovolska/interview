@@ -1,9 +1,8 @@
-$darkGrey: #424242;
-$lightGrey: #595959;
-$lightSkyBlue: #dde2e6;
-
 .main {
-    margin: 7%;
+    padding-top: 7%;
+    & section {
+        margin: 7%;
+    }
     &__step {
         color: $darkGrey;
         font-size: 0.9em;
@@ -31,6 +30,7 @@ $lightSkyBlue: #dde2e6;
     }
     &__settings {
         // display: none;
+        margin: 7%;
 
         &__access {
             padding: 0;
@@ -39,7 +39,7 @@ $lightSkyBlue: #dde2e6;
         }
     }
     &__questions {
-        display: none;
+        // display: none;
     }
     
     &__button {
@@ -53,10 +53,10 @@ $lightSkyBlue: #dde2e6;
 
     }
     &__rules {
-        display: none;
+        // display: none;
     }
     &__start {
-        display: none;
+        // display: none;
     }
     &__media {
         margin: 0;
@@ -106,7 +106,7 @@ $lightSkyBlue: #dde2e6;
     border-radius: 8px;
     &__title {
         text-transform: uppercase;
-        color: #ff4343;
+        color: $attention;
         font-family: $fontBold;
     }
 

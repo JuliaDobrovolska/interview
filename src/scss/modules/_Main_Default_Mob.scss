@@ -1,0 +1,97 @@
+body {
+    width: 100vw;
+}
+.main {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    // position: relative;
+    display: flex;
+    // padding: 10% 0 0 10%;
+    // top: 0;
+
+    &__picture {
+        position: fixed;
+        top:0;
+        left:0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    &__content {
+        z-index: 20;
+        width: 80%;
+        margin: 10% 0 0 10%;
+        &__item {
+            font-family: $fontRegular;
+            font-weight: 500;
+            color: $lightBlack;
+            font-size: 0.7em;
+            width: 280px;
+        }
+    }
+
+    
+    &__title {
+        // width: 60%;
+        width: 58%;
+        line-height: 1;
+        font-family: $fontBold;
+        color: $darkGrey;
+        font-size: 2.5em;
+
+    }
+    &__description {
+        // width: 60%;
+        width: 60%;
+        color: $brownish-gray;
+        font-size: 0.9em;
+    }
+    &__form {
+        width: 220px;
+        margin-top: 8%;
+        position: relative;
+    
+        &__input {
+            height: 40px;
+            width: 200px;
+            border: 1px solid $lightSkyBlue;
+            padding-left: 30px;
+            &::placeholder{
+                color: $light-gray-blue;
+            }
+         
+        }
+        &__button {
+            border: 0;
+            background-color: #fff;
+            position: absolute;
+            right: 0;
+            top:10px;
+            
+        }
+    }
+ 
+    &__callback {
+        display: flex;
+        align-items: center;
+    }
+    &__call {
+        display: flex;
+        align-items: center;
+    }
+}
+.call__button {
+    color: $green;
+    font-family: $fontBold;
+    font-size: 0.8em;
+}
+.call__img {
+    width: 20px;
+    padding-right: 10px;
+
+}
+.call__info {
+    color: $darkGrey;
+    font-size: 0.8em;
+}
