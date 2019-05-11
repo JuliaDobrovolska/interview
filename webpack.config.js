@@ -25,6 +25,7 @@ module.exports = [{
   entry: {
     "main":'./src/js/index.js',
     "interview":'./src/js/interview.js',
+    "int":'./src/js/int.js',
     
 
   },
@@ -68,7 +69,9 @@ module.exports = [{
   "default_mob": './src/scss/default_mob.scss',
   "default_desktop":'./src/scss/default_desktop.scss',
   "interview_mob": './src/scss/interview_mob.scss',
-  "interview_desktop": './src/scss/interview_desktop.scss'
+  "interview_desktop": './src/scss/interview_desktop.scss',
+  "final_mob": './src/scss/final_mob.scss',
+  "final_desktop": './src/scss/final_desktop.scss'
 
 },
 output: {

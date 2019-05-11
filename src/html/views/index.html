@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Online interview</title>
+    <link rel="preload" as="style" type="text/css" href="./css/default_mob.bundle.css">
+    <link rel="preload" as="style" type="text/css" href="./css/default_desktop.bundle.css" media="(min-width: 425.02px)">
     <link rel="stylesheet" href="./css/default_mob.bundle.css">
     <link rel="stylesheet" href="./css/default_desktop.bundle.css" media="(min-width: 425.02px)">
 
@@ -13,10 +15,11 @@
     <header class="header">
         <nav class="header__nav">
             <img class="logo" src="./img/pb.svg" alt="logo">
-            <!-- <ul class="lang">
+            <ul class="lang">
                 <li class="lang__item lang__item--selected">укр</li>
+                <li class="lang__item">|</li>
                 <li class="lang__item">рус</li>
-            </ul> -->
+            </ul>
         </nav>
     </header> 
     <main class="main">
@@ -66,6 +69,6 @@
 
 
 
-    <script src="./js/main.bundle.js"></script>
+    <script async src="./js/main.bundle.js"></script>
 </body>
 </html>

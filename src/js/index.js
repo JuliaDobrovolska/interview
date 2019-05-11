@@ -26,30 +26,40 @@ formButton.onclick = function sendCode(){
                 
         var secondParagraph = document.getElementById("secondParagraph");
         secondParagraph.innerHTML = 'Через <span id="time">1:30</span> Вы сможете подтвердить вход при помощи звонка.';
-        var timeDisplay = document.getElementById("time");
-        startTimer(90, timeDisplay);  //// поставить 90
+        
+        timer(1, 30); 
 
 
         // var inputPassword = document.getElementById('inputPassword').value;
         // checkPassword(inputPassword);
 
     }
-    function startTimer(duration, display) {
-        var timer = duration, minutes, seconds;
-        setInterval(function () {
-            minutes = parseInt(timer / 60, 10)
-            seconds = parseInt(timer % 60, 10);
-    
-            minutes = minutes < 10 ? minutes : minutes;
-            seconds = seconds < 10 ? "0" + seconds : seconds;
-    
-            display.textContent = minutes + ":" + seconds;
-    
-            while (--timer === 0) {
-                callMe();
+    var timeoutHandle;
+        function timer(minutes, seconds) {
+            function tick() {
+                var counter = document.getElementById("time");
+                counter.innerHTML =
+                    minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
+                seconds--;
+                if (seconds >= 0) {
+                    timeoutHandle = setTimeout(tick, 1000);
+                } else {
+                    if (minutes >= 1) {
+                        setTimeout(function () {
+                            timer(minutes - 1, 59);
+                        }, 1000);
+                    } else {
+                    callMe();
+
+
+                    }
+
+                }
             }
-        }, 1000);
-    }
+            tick();
+        }
+          
+              
     function callMe() {
 
         var callbackTemp = document.getElementById('callbackTemp');

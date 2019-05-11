@@ -2,16 +2,19 @@
     font-family: "Open Sans Regular";
     font-style: normal;
     font-weight: 400;
-    src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
+    font-display: swap;
+    src: url("../fonts/open-sans-cyrillic-regular.woff2") format("woff2");
 }
 @font-face {
     font-family: "Open Sans Bold";
     font-style: normal;
     font-weight: 800;
-    src: url("../fonts/OpenSans-Bold.ttf") format("truetype");
+    font-display: swap;
+    src: url("../fonts/open-sans-cyrillic-bold.woff2") format("woff2");
 }
 
 $bg-color: #ffffff;
+$header-color: #f2f2f2;
 $fontRegular: "Open Sans Regular";
 $fontBold: "Open Sans Bold";
 $darkGrey: #424242;
@@ -23,6 +26,7 @@ $attention: #ff4343;
 $light-gray-blue: #abb2b7;
 $lightBlack: #1f1f1f;
 $green: #75af26;
+$video-color: #f3f3f3;
 
 body {
     margin: 0;

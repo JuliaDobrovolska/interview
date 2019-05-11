@@ -2,44 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Онлайн интервью</title>
+    <link rel="preload" as="style" type="text/css" href="./css/interview_mob.bundle.css">
+    <link rel="preload" as="style" type="text/css" href="./css/interview_desktop.bundle.css" media="(min-width: 769.02px)">
     <link rel="stylesheet" href="./css/interview_mob.bundle.css">
-    <link rel="stylesheet" href="./css/interview_desktop.bundle.css" media="(min-width: 425.02px)">
+    <link rel="stylesheet" href="./css/interview_desktop.bundle.css" media="(min-width: 769.02px)">
 </head>
 <body>
     <header class="header">
             <nav class="header__nav">
                 <img class="logo" src="./img/pb.svg" alt="logo">
-                <!-- <ul class="lang">
-                    <li class="lang__item">укр</li>
-                    <li class="lang__item lang__item--selected">рус</li>
-                </ul> -->
+                <ul class="lang">
+                    <li class="lang__item lang__item--selected">укр</li>
+                    <li class="lang__item">|</li>
+                    <li class="lang__item">рус</li>
+                </ul>
             </nav>
     </header>
     <main class="main" id="main">
         <template id="settings">
-            <section class="main__settings">
+            <article class="main__settings">
+                <section class="main__content">
                 <span class="main__step">Шаг 1 из 3</span>
                 <h2 class="main__header">Настройки подключения</h2>
                 <p class="main__description">Для проведения видеозаписи нам необходимо получить доступ:</p>
                 <ul class="main__settings__access">
-                    <li class="access__item">
+                    <li class="access__item access__item__camera">
                         <img class="access__item__img" src="./img/camera.svg" alt="camera">
-                        <span class="access__item__text">доступ к камере</span>
+                        <span class="access__item__text ">доступ к камере</span>
                     </li>
-                    <li class="access__item">
+                    <li class="access__item access__item__micro">
                         <img class="access__item__img" src="./img/micro.svg" alt="micro">
-                        <span class="access__item__text">доступ к микрофону</span>
+                        <span class="access__item__text ">доступ к микрофону</span>
                     </li>
                 </ul>
                 <p class="main__description">Для корректной работы системы, пожалуйста, нажмите “Разрешить” в открывшемся диалоговом окне. В случае, если у вас более одной камеры или микрофона, выберите те, которые необходимы в выпадающем списке.</p>
+            
                 <button class="main__button" id="settingsButton" disabled >Продолжить</button>
             </section>
+            </article>
         </template>
         <template id="rules">
-            <section class="main__rules">
+            <article class="main__rules">
+                <section class="main__content main__content__rules">
                 <span class="main__step">Шаг 2 из 3</span>
                 <h2 class="main__header">Для успешной записи интервью:</h2>
                 <ul class="main__description">
@@ -57,62 +64,85 @@
                     <li class="rules__list__item">просмотреть свой ответ</li>
                     <li class="rules__list__item">1 раз его перезаписать</li>
                 </ul>
-                <!--  -->
+            </section>
+            
                 <figure class="main__media">
+                    <p class="main__media__ready">готово к записи</p>
                     <video class="main__media__content" autoplay muted></video>
-                    
-
                 </figure>
                 <button class="main__button" id="rulesButton">Продолжить</button>
-            </section>
+                <!-- <button class="main__button" id="rulesButton">Продолжить</button> -->
+            </article>
         </template>
         <template id="start">
-            <section class="main__start">
+            <article class="main__start">
+                <section class="main__content">
                     <span class="main__step">Шаг 3 из 3</span>
                     <h2 class="main__header">Давайте начинать!</h2>
                     <p class="main__description">
                             Для записи ответа на вопрос нажмите на «Запись видео» и отвечайте на вопрос. Учтите ограниченость времени на вопрос и используйте
                             его рационально.
                     </p>
-                    
+                </section>
+                
                     <figure class="main__media">
+                        <p class="main__media__ready">готово к записи</p>
                         <video class="main__media__content"  autoplay muted></video>
                     </figure>
                     <button class="main__button" id="startButton">Начать интервью</button>
-            </section>
+                    
+            </article>
         </template>
         <template id="questions">
-            <section class="main__questions">
-                <h2 class="main__header">Вопросы 1 из 5</h2>
-                <p class="main__subtitle">Давайте познакомимся! Расскажите о себе</p>
-                <ol class="question__list">
-                    <li class="question__list__item">На какой специальности Вы учились?</li>
-                    <li class="question__list__item">Почему выбрали такую специальность?</li>
-                    <li class="question__list__item">Какой опыт работы имеете?</li>
-                    <li class="question__list__item">С чем был связана смена мест работы/должностей?</li>
-                    <li class="question__list__item">Какие вакансии сейчас рассматриваете?</li>
-                </ol>
-                <div class="remember">
-                    <span class="remember__title">Помните!</span>
-                    <p class="remember__description">Вам необходимо ответить на все вопросы. От полноты и качества ответов зависит результат интервью.</p>
-                </div>
-                <figure class="main__media">
-                    <video class="main__media__content"  autoplay muted></video>
-                </figure>
-                <template id="recordedVideo">
-                    <figure class="main__media__recorded">
-                        <video class="main__media__content"></video>
-                        <div class="play">
-                        <img class="play__img" src="./img/camera-copy-6.svg" alt="play">
-                        <p class="play__text">ПРОИГРАТЬ ВИДЕО</p>
+            <article class="main__questions">
+                <section class="main__content main__content__questions">
+                    <h2 class="main__header">Вопросы 1 из 5</h2>
+                    <p class="main__subtitle">Давайте познакомимся! Расскажите о себе</p>
+                    <ol class="question__list">
+                        <li class="question__list__item">На какой специальности Вы учились?</li>
+                        <li class="question__list__item">Почему выбрали такую специальность?</li>
+                        <li class="question__list__item">Какой опыт работы имеете?</li>
+                        <li class="question__list__item">С чем был связана смена мест работы/должностей?</li>
+                        <li class="question__list__item">Какие вакансии сейчас рассматриваете?</li>
+                    </ol>
+                    <div class="remember">
+                        <span class="remember__title">Помните!</span>
+                        <p class="remember__description">Вам необходимо ответить на все вопросы. От полноты и качества ответов зависит результат интервью.</p>
                     </div>
-                    </figure>
-                </template>
+                    <p class="main__media__countdown" id="countdown"></p>
+                </section>
+                
+                <figure class="main__media main__media__full" id="recordVideoFigure">
+                    <p class="main__media__ready main__media__ready-full">готово к записи</p>
+                    <video class="main__media__content main__media__full-video"  autoplay muted></video>
+                </figure>
                 <button class="main__button" id="recordButton">Записать видео</button>
-                <!-- <input type="button" value="Записать видео" onclick="toggleRecording();" > -->
-            </section>
-        </template>      
+                
+            
+        </template>  
+        <template id="recordedVideoTemp">
+            <figure class="main__media main__media__full" id="recordedVideoFigure">
+                <video class="main__media__content  main__media__full-video main__media__recorded" id="recordedVideo"  preload="metadata" ></video>
+                <div class="play">
+                <img class="play__img" src="./img/camera-copy-6.svg" alt="play">
+                <p class="play__text">ПРОИГРАТЬ ВИДЕО</p>
+            </div>
+            </figure>
+        </template>
+                
+        <template id="stopButtonTemp">
+            <button class="main__button" id="stopButton">Закончить запись</button>
+        </template>
+        <template id="pauseResumeToggle">
+            <button class="main__button" id="pauseButton">Поставить на паузу</button> 
+        </template>
+        <template id="nextQuestionTemp">
+            <button class="main__button" id="recordAgain">Перезаписать видео</button> 
+            <button class="main__button" id="nextQuestion">Следующий вопрос</button> 
+        </template>
+    </article>  
+              
     </main>
-    <script src="./js/interview.bundle.js"></script>
+    <script async src="./js/interview.bundle.js"></script>
 </body>
 </html>
