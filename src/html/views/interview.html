@@ -69,6 +69,7 @@
                 <figure class="main__media">
                     <p class="main__media__ready">готово к записи</p>
                     <video class="main__media__content" autoplay muted></video>
+                    
                 </figure>
                 <button class="main__button" id="rulesButton">Продолжить</button>
                 <!-- <button class="main__button" id="rulesButton">Продолжить</button> -->
@@ -85,7 +86,7 @@
                     </p>
                 </section>
                 
-                    <figure class="main__media">
+                    <figure class="main__media main__media__start">
                         <p class="main__media__ready">готово к записи</p>
                         <video class="main__media__content"  autoplay muted></video>
                     </figure>
@@ -94,52 +95,76 @@
             </article>
         </template>
         <template id="questions">
-            <article class="main__questions">
-                <section class="main__content main__content__questions">
-                    <h2 class="main__header">Вопросы 1 из 5</h2>
-                    <p class="main__subtitle">Давайте познакомимся! Расскажите о себе</p>
-                    <ol class="question__list">
-                        <li class="question__list__item">На какой специальности Вы учились?</li>
-                        <li class="question__list__item">Почему выбрали такую специальность?</li>
-                        <li class="question__list__item">Какой опыт работы имеете?</li>
-                        <li class="question__list__item">С чем был связана смена мест работы/должностей?</li>
-                        <li class="question__list__item">Какие вакансии сейчас рассматриваете?</li>
-                    </ol>
-                    <div class="remember">
-                        <span class="remember__title">Помните!</span>
-                        <p class="remember__description">Вам необходимо ответить на все вопросы. От полноты и качества ответов зависит результат интервью.</p>
-                    </div>
+                <article class="main__questions">
+                    <section class="main__content main__content__questions" id="mainContentQuestions">
+                        <template id="questionContent">
+                            <h2 class="main__header" id="title"></h2>
+                            <p class="main__subtitle" id="subtitle"></p>
+                            <ol class="question__list">
+                                <li class="question__list__item"></li>
+                                <li class="question__list__item"></li>
+                                <li class="question__list__item"></li>
+                                <li class="question__list__item"></li>
+                                <li class="question__list__item"></li>
+                            </ol>
+                        </template>
+                        <div class="remember">
+                            <span class="remember__title">Помните!</span>
+                            <p class="remember__description">Вам необходимо ответить на все вопросы. От полноты и качества ответов зависит результат интервью.</p>
+                        </div>
+                       
+                    </section>
                     <p class="main__media__countdown" id="countdown"></p>
-                </section>
+                    
+                    <figure class=" main__media__full" id="recordVideoFigure">
+                        <div id="pulsePoint" class="pulse-point"></div>
+                        <p class="main__media__ready main__media__ready-full" id="videoLink">готово к записи</p>
+                        <video class="main__media__content main__media__full-video"  autoplay muted></video>
+                    </figure>
+                    <button class="main__button main__button__first" id="recordButton">
+                        <span>Записать видео</span>
+                        <img class="main__button__img" src="./img/stream.svg" alt="stream">
+                        <!--  -->
+                    </button>
+                    
                 
-                <figure class="main__media main__media__full" id="recordVideoFigure">
-                    <p class="main__media__ready main__media__ready-full">готово к записи</p>
-                    <video class="main__media__content main__media__full-video"  autoplay muted></video>
-                </figure>
-                <button class="main__button" id="recordButton">Записать видео</button>
-                
-            
-        </template>  
+            </template>  
         <template id="recordedVideoTemp">
-            <figure class="main__media main__media__full" id="recordedVideoFigure">
+            <figure class="main__media__full" id="recordedVideoFigure">
                 <video class="main__media__content  main__media__full-video main__media__recorded" id="recordedVideo"  preload="metadata" ></video>
+               
                 <div class="play">
                 <img class="play__img" src="./img/camera-copy-6.svg" alt="play">
                 <p class="play__text">ПРОИГРАТЬ ВИДЕО</p>
             </div>
             </figure>
         </template>
-                
+                 
         <template id="stopButtonTemp">
-            <button class="main__button" id="stopButton">Закончить запись</button>
+            <button class="main__button main__button__first" id="stopButton">
+                <span>Закончить запись</span>
+                <img class="main__button__img" src="./img/stop_video.svg" alt="stop">
+            </button>
         </template>
         <template id="pauseResumeToggle">
-            <button class="main__button" id="pauseButton">Поставить на паузу</button> 
+            <button class="main__button main__button__second" id="pauseButton">
+                <span id="pauseSpan">Поставить на паузу</span>
+                <img class="main__button__img" id="pauseImg" src="./img/pause.svg" alt="pause">
+            </button> 
         </template>
         <template id="nextQuestionTemp">
-            <button class="main__button" id="recordAgain">Перезаписать видео</button> 
-            <button class="main__button" id="nextQuestion">Следующий вопрос</button> 
+            <button class="main__button main__button__first" id="recordAgain">
+                <span>Перезаписать видео</span>
+                <img class="main__button__img" src="./img/restart.svg" alt="restart">
+            </button> 
+            <button class="main__button main__button__second" id="nextQuestion">Следующий вопрос</button> 
         </template>
+        <template id="finishButtonTemp">
+                <a class="main__button main__button__second" id="finishButton" href="final.html"> 
+                    <span>Завершить интервью</span>
+                    <img class="main__button__img" src="./img/finish.svg" alt="finish">
+                </a> 
+            </template>
     </article>  
               
     </main>

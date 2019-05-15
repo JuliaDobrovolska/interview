@@ -2,7 +2,7 @@
 .main {
     // padding-top: 7%;
     & article {
-        margin: 7%;
+        // margin: 7%;
     }
     &__step {
         color: $darkGrey;
@@ -29,9 +29,10 @@
             font-family: $fontBold;
         }
     }
-    &__rules, &__start, &__questions {
+    &__rules, &__start, &__settings, &__questions {
         // display: flex;
         // flex-direction: column;
+        margin: 7%;
 
     }
     &__settings {
@@ -54,12 +55,24 @@
         border: 0;
         font-family: $fontBold;
         font-weight: 500;
-        padding: 5% 0; 
         width: 100%;
         margin-top: 2%;
-        // order: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: none;
+        cursor: pointer;
+        height: 56px;
+        color: $darkGrey;
+        font-size: 0.8em;
+        &__img {
+
+        }
         
 
+    }
+    &__questions {
+        display: grid;
     }
    
     
@@ -101,7 +114,7 @@
     color: $lightGrey;
     &__item {
         // padding-bottom: 5%;
-        line-height: 2;
+        line-height: 1.8;
 
         list-style-type: decimal;
     }
@@ -128,10 +141,10 @@
     justify-content: center;
     align-items: center;
     margin: 0;
-    &__recorded {
-        filter: grayscale(0.8) brightness(0.6);
+    // &__recorded {
+    //     filter: grayscale(0.8) brightness(0.6);
 
-    }
+    // }
     
     &::after {
         content: "";
@@ -140,10 +153,9 @@
     }
     
     &__content{
-        position: absolute;
-        width: 70%;
-        height: 70%;
-        clip-path: inset(0% 10% 0% 10%);
+        // position: absolute;
+        width: 50%;
+        height: 50%;
         -moz-transform: scaleX(-1);
         -o-transform: scaleX(-1);
         -webkit-transform: scaleX(-1);
@@ -151,15 +163,18 @@
     
     }
     &__full {
-        background-color: #fff;
+        width: 100%;
+        position: relative;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        margin-top: 3%;
         &-video {
-            width: 100vw;
-            // box-sizing: border-box;
-            clip-path: inset(0% 8% 0% 8%);
-            height: 100%;
-            
-            // display: block;
+            width: 100%;
+            height: auto;
         }
+        
     }
     &__ready {
         position: absolute;
@@ -172,19 +187,26 @@
         font-weight: 600;
         color: $darkGrey;
         letter-spacing: 2px;
-        padding: 8px 15px;
+        padding: 10px 15px;
+        text-transform: uppercase;
+        font-size: 0.8em;
 
-    &-full {
-        top: 5%;
-    }    
+    // &-full {
+    //     top: 5%;
+    // }    
+    }
+    &__countdown {
+        justify-self: end;
+        // margin-bottom: 0.3em;
     }
 
 }
 .play {
     position: absolute;
-    // background-color: #424242;
+    background-color: #424242;
     width: 100%;
-    // opacity: 0.75;
+    opacity: 0.75;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -197,4 +219,56 @@
     &__img {
        width: 30%;
     }
+}
+.countdown {
+    
+    &__time {
+        background-color: $video-color;
+        font-family: $fontBold;
+        color: $darkGrey;
+        font-size: 1.3em;
+        padding: 2px 8px;
+        border-radius: 8px;
+    }
+}
+.pulse-point {
+    display: none;
+    position: absolute;
+    top: 21px;
+    left: 21px;
+    width: 20px;
+    height: 20px;
+    z-index: 21;
+    border-radius: 50%;
+    background-color: #ff5d5d;
+    box-shadow: 0 0 0 rgba(255, 93, 93, 0.6);
+    -webkit-animation: pulseRecordBefore 2s infinite;
+    -moz-animation: pulseRecordBefore 2s infinite;
+    -o-animation: pulseRecordBefore 2s infinite;
+    animation: pulseRecordBefore 2s infinite;
+}
+@-webkit-keyframes pulseRecordBefore {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 93, 93, 0.8);
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 10px rgba(255, 93, 93, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 93, 93, 0);
+  }
+}
+@keyframes pulseRecordBefore {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(255, 93, 93, 0.8);
+    box-shadow: 0 0 0 0 rgba(255, 93, 93, 0.8);
+  }
+  70% {
+    -moz-box-shadow: 0 0 0 10px rgba(255, 93, 93, 0);
+    box-shadow: 0 0 0 10px rgba(255, 93, 93, 0);
+  }
+  100% {
+    -moz-box-shadow: 0 0 0 0 rgba(255, 93, 93, 0);
+    box-shadow: 0 0 0 0 rgba(255, 93, 93, 0);
+  }
 }

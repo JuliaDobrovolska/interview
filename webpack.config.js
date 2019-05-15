@@ -24,9 +24,7 @@ const htmlPlugins = generateHtmlPlugins('./src/html/views');
 module.exports = [{
   entry: {
     "main":'./src/js/index.js',
-    "interview":'./src/js/interview.js',
-    "int":'./src/js/int.js',
-    
+    "interview":'./src/js/interview.js'
 
   },
   output: {
@@ -60,7 +58,12 @@ module.exports = [{
       {
         from: './src/img',
         to: './img'
+      },
+      {
+        from: './src/json',
+        to: './json'
       }
+
     ]),
   ].concat(htmlPlugins)
 },
