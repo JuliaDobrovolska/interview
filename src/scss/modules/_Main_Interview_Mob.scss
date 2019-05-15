@@ -1,9 +1,6 @@
 
 .main {
-    // padding-top: 7%;
-    & article {
-        // margin: 7%;
-    }
+   
     &__step {
         color: $darkGrey;
         font-size: 0.9em;
@@ -30,13 +27,10 @@
         }
     }
     &__rules, &__start, &__settings, &__questions {
-        // display: flex;
-        // flex-direction: column;
         margin: 7%;
 
     }
     &__settings {
-        // margin: 7%;
 
         &__access {
             padding: 0;
@@ -65,9 +59,7 @@
         height: 56px;
         color: $darkGrey;
         font-size: 0.8em;
-        &__img {
-
-        }
+        
         
 
     }
@@ -80,17 +72,7 @@
 }
 .access__item {
     display: flex;
-    // justify-content: center;
     align-items: center;
-    &__camera {
-        // list-style-image: url(../img/camera.svg);
-    }
-    &__micro {
-
-    }
-
-
-
     &__text {
         font-family: $fontBold;
         color: $darkGrey;
@@ -113,7 +95,6 @@
     padding-left: 7%;
     color: $lightGrey;
     &__item {
-        // padding-bottom: 5%;
         line-height: 1.8;
 
         list-style-type: decimal;
@@ -141,11 +122,6 @@
     justify-content: center;
     align-items: center;
     margin: 0;
-    // &__recorded {
-    //     filter: grayscale(0.8) brightness(0.6);
-
-    // }
-    
     &::after {
         content: "";
         display: block;
@@ -153,7 +129,6 @@
     }
     
     &__content{
-        // position: absolute;
         width: 50%;
         height: 50%;
         -moz-transform: scaleX(-1);
@@ -191,13 +166,9 @@
         text-transform: uppercase;
         font-size: 0.8em;
 
-    // &-full {
-    //     top: 5%;
-    // }    
     }
     &__countdown {
         justify-self: end;
-        // margin-bottom: 0.3em;
     }
 
 }

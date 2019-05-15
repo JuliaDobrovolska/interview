@@ -30,9 +30,6 @@ formButton.onclick = function sendCode(){
         timer(1, 30); 
 
 
-        // var inputPassword = document.getElementById('inputPassword').value;
-        // checkPassword(inputPassword);
-
     }
     var timeoutHandle;
         function timer(minutes, seconds) {
@@ -77,27 +74,8 @@ formButton.onclick = function sendCode(){
             var mainCall = document.querySelector('.main__call');
             sectionContent.replaceChild(mainCall, callback);
 
-            
-
         }
-        
-            
-       
 
     }
-
-    // function checkPassword(password) {
-    //     console.log(password.length);
-    //     if(Number.isNaN(password) || password === null || password.length === 0) {
-    //         var checkButton = document.getElementById('checkPassword');
-    //         checkButton.disabled = true;
-    //     } 
-
-
-
-    // }
-    
-
-
 
 }

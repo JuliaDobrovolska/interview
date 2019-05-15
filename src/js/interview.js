@@ -54,8 +54,6 @@ window.onload = function getMedia(){
             var startButton = document.querySelector('#startButton');
             var isRecordAgain = false;
             startButton.onclick = function viewQuestionsPage(){
-
-               console.log(isRecordAgain);
               var questions = document.getElementById('questions');
               var cloneQuestions = questions.content.cloneNode(true);
               main.appendChild(cloneQuestions);
@@ -66,14 +64,10 @@ window.onload = function getMedia(){
                 var questionContent = document.getElementById('questionContent');
                 var remember = document.querySelector('.remember');
                 if(questionsArray.length != 0){
-                    // && questionsArray[0].id !== 1
                     if(isRecordAgain === false){
-                    // var elem = questionsArray.shift();
                     var elem = questionsArray[numberQuestion];
-                    }else {
+                    } else {
                         var elem = questionsArray[numberQuestion];
-                        console.log(elem);
-                        // console.log(elem.shift());
                     }
                     var currentTpl = questionContent.content.cloneNode(true);
                     currentTpl.querySelector('#title').textContent = elem.title;
@@ -97,27 +91,7 @@ window.onload = function getMedia(){
               window.stream = stream;
               userCamera.srcObject = stream;
             
-              
-
-
-            
-
-
-            
-            
-              //  here media recorder start
-
-
-
-
-
-
-
-
-
-
-
-
+             
             var recordButton = document.querySelector('#recordButton');
             var mediaRecorder;
             var recordedBlobs = [];
@@ -177,21 +151,17 @@ window.onload = function getMedia(){
               }
               }
           
-              timer(1, 30); // поставить 5 мин
+              timer(1, 30); 
                 
 
 
                 var pauseButton = document.getElementById('pauseButton');
                 var pauseImg = document.getElementById('pauseImg');
                 var pauseSpan = document.getElementById('pauseSpan');
-                // console.log(pauseButton.firstChild.textContent.length);
-                
-                console.log(videoLink.textContent);
               
                 pauseButton.onclick = function togglePauseResume(){
                   if(pauseSpan.textContent === "Поставить на паузу"){
                       mediaRecorder.pause();
-                      // console.log("hel");
                       videoLink.textContent = "Пауза";
                       videoLink.style.backgroundColor ="#dde2e6";
                       videoLink.style.color ="#4b4e4f";
@@ -204,9 +174,7 @@ window.onload = function getMedia(){
                       pauseSpan.textContent = "Продолжить запись";
                       pauseImg.src = './img/stream.svg';
                       
-                      console.log(pauseImg);
                   } else {
-                    // console.log("else");
                       mediaRecorder.resume();
                       videoLink.textContent = "Идет запись";
                       videoLink.style.color = "#fff";
@@ -236,7 +204,6 @@ window.onload = function getMedia(){
                   mainQuestions.replaceChild(recordedFigure, recordFigure);
 
 
-                    //поменять кнопки
                   var nextQuestionTemp = document.getElementById('nextQuestionTemp');
                   var cloneNextQuestion = nextQuestionTemp.content.cloneNode(true);
                   mainQuestions.appendChild(cloneNextQuestion);
@@ -251,10 +218,6 @@ window.onload = function getMedia(){
 
 
 
-                    // var recordedVideo = document.querySelector('#recordedVideo');
-                    // recordedVideo.controls = true;                                      ///панель видео
-
-
 
                   var play = document.querySelector('.play__img');
                   play.onclick = function play(){
@@ -265,23 +228,17 @@ window.onload = function getMedia(){
                       
                     }
                   }
-                                  //record again
+                 
                 var recordAgain = document.getElementById('recordAgain');
                recordAgain.onclick = function recordVideoAgain(){
-                //  var questionsSection = document.querySelector('.main__questions');
                     main.removeChild(mainQuestions);
                     isRecordAgain = true;
-                    // if(questionsArray[0].id !== 1)
                     viewQuestionsPage();
 
 
                   }
                   
                 
-                //record again
-                //next question 
-
-
 
 
                 var nextQuestion = document.getElementById('nextQuestion');
@@ -299,26 +256,6 @@ window.onload = function getMedia(){
                     viewQuestionsPage();
                 }
                 }
-                
-
-                //next question 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                
-
                 
               }
 
@@ -350,7 +287,6 @@ window.onload = function getMedia(){
                     }
                 }
               }
-              console.log('Created MediaRecorder', mediaRecorder, 'with options', options);
               
 
               function handleDataAvailable(event) {
@@ -360,36 +296,14 @@ window.onload = function getMedia(){
               }
               mediaRecorder.ondataavailable = handleDataAvailable;
               mediaRecorder.start(10); // collect 10ms of data
-              console.log('MediaRecorder started', mediaRecorder);
                 
             }
           
-          
-
-            //  here media recorder end
-
- 
-
         }
        
-
-
-
-
-
         }
       }
-       
-
-      // window.onblur = function stopStream(){
-      //   stream.getVideoTracks()[0].stop();
-      //   console.log('stop stream');
-      //   window.onblur = function(){
-          
-
-      //   }
-      // }
-      
+     
     }
       
     function errorCallback(error) {

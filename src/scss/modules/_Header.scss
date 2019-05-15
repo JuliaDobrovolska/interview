@@ -1,13 +1,10 @@
 .header {
     background-color: $header-color;
-    // height: 8vh;
     display: flex;
     align-items: center;
     z-index: 30;
     position: sticky;
-    // width: 100%;
     top: 0;
-    // left: 0; 
     
     
 
@@ -24,7 +21,6 @@
 .lang {
     display: grid;
     grid-template-columns: repeat(3, min-content);
-    // justify-content: space-between;
     
     &__item {
         text-transform: uppercase;
